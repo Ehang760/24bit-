@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>24bit无损音乐网-无损音乐下载</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="SongsterChart.css"></link>
+</head>
+<body>
+  <!-- logo：鸡锚定在 "t" 上方，一起组成相对定位的参考系 -->
+  <a href="index.html" class="logo-link">
+    <span class="logo">
+      24bi<span class="logo-t">t</span>无损
+      <!-- 鸡：绝对定位在 logo 内部，钉在 "t" 的正上方 -->
+      <span class="chicken-anchor">
+        <span class="chicken-wrap">
+          <svg class="chicken" viewBox="0 0 120 110" width="64" height="58" aria-hidden="true">
+            <!-- 头/身体 -->
+            <ellipse cx="60" cy="68" rx="44" ry="36" fill="#FFD23F"/>
+            <!-- 头顶毛 -->
+            <path d="M52 34 Q60 18 68 34" stroke="#E88A1A" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M62 32 Q72 20 76 36" stroke="#E88A1A" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <!-- 腮红 -->
+            <circle cx="34" cy="74" r="7" fill="#FF8A8A" opacity="0.75"/>
+            <circle cx="86" cy="74" r="7" fill="#FF8A8A" opacity="0.75"/>
+            <!-- 眼镜组：一起晃动 -->
+            <g class="glasses">
+              <!-- 镜框 -->
+              <circle cx="47" cy="62" r="13" fill="#fff" stroke="#222" stroke-width="3"/>
+              <circle cx="73" cy="62" r="13" fill="#fff" stroke="#222" stroke-width="3"/>
+              <!-- 中间鼻梁 -->
+              <line x1="60" y1="62" x2="60" y2="62" stroke="#222" stroke-width="3"/>
+              <!-- 镜片反光 -->
+              <circle cx="43" cy="58" r="3" fill="#222"/>
+              <circle cx="69" cy="58" r="3" fill="#222"/>
+            </g>
+            <!-- 嘴 -->
+            <path d="M54 78 L66 78 L60 88 Z" fill="#F08A1A"/>
+          </svg>
+        </span>
+      </span>
+    </span>
+  </a>
+
+  <!-- 搜索框 -->
+  <form class="search-box" id="searchForm">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input id="searchInput" type="text" name="q" placeholder="搜索歌曲、歌手..." autocomplete="off" />
+    <button type="submit" class="search-btn">搜索</button>
+  </form>
+
+  <!-- 搜索结果：独立容器，渲染在搜索框下方，绝不上挤 logo/鸡 -->
+  <div id="searchResult" class="search-result"></div>
+
+  <!-- ===== 本周歌曲榜（手写原样，保持不变） ===== -->
+  <section class="chart-box">
+    <h2 class="chart-title">本周歌曲榜</h2>
+    <div class="chart-card">
+      <ol class="chart-list">
+        <li><a href="play.html?id=1"><span class="rank r1">1</span><span class="song">九张机</span></a></li>
+        <li><a href="play.html?id=2"><span class="rank r2">2</span><span class="song">叹云兮</span></a></li>
+        <li><a href="play.html?id=3"><span class="rank r3">3</span><span class="song">Sofia</span></a></li>
+        <li><a href="play.html?id=4"><span class="rank r4">4</span><span class="song">地球ぎ</span></a></li>
+        <li><a href="play.html?id=5"><span class="rank r4">5</span><span class="song">Hop</span></a></li>
+        <li><a href="play.html?id=6"><span class="rank r4">6</span><span class="song">24bit无损音质</span></a></li>
+        <li><a href="play.html?id=7"><span class="rank r4">7</span><span class="song">无损音乐下载站</span></a></li>
+        <li><a href="play.html?id=8"><span class="rank r4">8</span><span class="song">青花瓷</span></a></li>
+        <li><a href="play.html?id=9"><span class="rank r4">9</span><span class="song">海阔天空</span></a></li>
+        <li><a href="play.html?id=10"><span class="rank r4">10</span><span class="song">山风山风等等我</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== 本周歌手榜（手写原样，歌手名已修正） ===== -->
+  <section class="singer-box">
+    <h2 class="singer-title">本周歌手榜</h2>
+    <div class="singer-card">
+      <ol class="singer-list">
+        <li><a href="#"><span class="rank r1">1</span><span class="song">叶炫清</span></a></li>
+        <li><a href="#"><span class="rank r2">2</span><span class="song">鞠婧祎</span></a></li>
+        <li><a href="#"><span class="rank r3">3</span><span class="song">Alvaro Soler</span></a></li>
+        <li><a href="#"><span class="rank r4">4</span><span class="song">松泽由美</span></a></li>
+        <li><a href="#"><span class="rank r4">5</span><span class="song">汤潮</span></a></li>
+        <li><a href="#"><span class="rank r4">6</span><span class="song">Various Artists</span></a></li>
+        <li><a href="#"><span class="rank r4">7</span><span class="song">周杰伦</span></a></li>
+        <li><a href="#"><span class="rank r4">8</span><span class="song">Beyond</span></a></li>
+        <li><a href="#"><span class="rank r4">9</span><span class="song">林俊杰</span></a></li>
+        <li><a href="#"><span class="rank r4">10</span><span class="song">邓丽君</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

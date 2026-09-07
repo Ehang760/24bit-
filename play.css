@@ -1,0 +1,32 @@
+.logo-link {
+  margin-left: 280px;  /* 向右 */
+  margin-top: 240px;
+  display: inline-block;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+}
+
+.logo-link:hover,
+.logo-link:focus,
+.logo-link:active {
+  text-decoration: none;
+  outline: none;
+}
+
+.logo {
+  position: relative;          /* 作为鸡的绝对定位参考 */
+  font-family: "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 1;
+  color: #111;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+}

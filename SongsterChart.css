@@ -1,0 +1,75 @@
+.singer-box {
+ max-width: 170px;
+ margin-left: 600px;
+ margin-top: -520px;
+ padding: 25px;
+}
+
+.singer-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #111;
+  margin-left: -105px;
+  margin-top: -60px;
+}
+
+.singer-card {
+  background: #f7f5ef;
+  border: 1.5px solid #111;
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-left: -105px;
+  margin-top: 30px;
+  
+}
+
+.singer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.singer-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  
+}
+
+.song {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.singer-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.singer-list .rank {
+  margin-right: 15px;   /* 圆点和文字间距 */
+}
+
+.singer-list .song {
+  margin-left: 0;
+}
+
+.rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+

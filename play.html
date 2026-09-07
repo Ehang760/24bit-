@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>正在播放</title>
+  <link rel="stylesheet" href="play.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<!-- logo -->
+<a href="index.html" class="logo-link">
+  <span class="logo">
+    24bi<span class="logo-t">t</span>无损
+    <span class="chicken-anchor">
+      <span class="chicken-wrap">
+        <svg class="chicken" viewBox="0 0 120 110" width="64" height="58" aria-hidden="true">
+          <ellipse cx="60" cy="68" rx="44" ry="36" fill="#FFD23F"/>
+          <path d="M52 34 Q60 18 68 34" stroke="#E88A1A" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M62 32 Q72 20 76 36" stroke="#E88A1A" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <circle cx="34" cy="74" r="7" fill="#FF8A8A" opacity="0.75"/>
+          <circle cx="86" cy="74" r="7" fill="#FF8A8A" opacity="0.75"/>
+          <g class="glasses">
+            <circle cx="47" cy="62" r="13" fill="#fff" stroke="#222" stroke-width="3"/>
+            <circle cx="73" cy="62" r="13" fill="#fff" stroke="#222" stroke-width="3"/>
+            <line x1="60" y1="62" x2="60" y2="62" stroke="#222" stroke-width="3"/>
+            <circle cx="43" cy="58" r="3" fill="#222"/>
+            <circle cx="69" cy="58" r="3" fill="#222"/>
+          </g>
+          <path d="M54 78 L66 78 L60 88 Z" fill="#F08A1A"/>
+        </svg>
+      </span>
+    </span>
+  </span>
+</a>
+
+<!-- 返回按钮 -->
+<a href="index.html" class="back-btn">
+  <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 18 9 12 15 6"></polyline>
+  </svg>
+  <span>返回</span>
+</a>
+
+<!-- ===== 播放器主体（完整版，同 music.html）===== -->
+<div class="player" id="player">
+  <div class="top-tags">
+    <div class="tag-master">
+      至臻母带
+      <span class="sub">192kHz</span>
+    </div>
+    <div class="tag-flac">无损</div>
+    <div class="tag-size">HQ</div>
+    <div class="tag-gfv">Hi-Res</div>
+    
+  </div>
+
+  <div class="cover-wrap">
+    <!-- 上一首 -->
+    <div class="nav-btn" id="prevBtn" title="上一首">
+      <svg viewBox="0 0 24 24"><path fill="#fff" d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+    </div>
+
+    <!-- 封面：外黑圈不转，里面图片旋转 -->
+    <div class="cover-frame" id="coverFrame">
+      <img class="cover-img" id="coverImg" src="" alt="封面">
+
+      <!-- 播放/暂停（居中在封面上） -->
+      <div class="play-btn" id="playBtn">
+        <svg viewBox="0 0 24 24">
+          <path fill="#fff" d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 下一首 -->
+    <div class="nav-btn" id="nextBtn" title="下一首">
+      <svg viewBox="0 0 24 24"><path fill="#fff" d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+    </div>
+  </div>
+
+  <div class="song-area">
+    <div class="producer"></div>
+     <a id="downloadBtn" class="download-btn" title="下载歌曲" download>
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    下载
+  </a>
+     
+     
+    <div class="song-row">
+      <div class="song-title" id="songTitle">九张机</div>
+      <div class="time" id="time">00:00 / 00:00</div>
+    </div>
+
+    <div class="progress" id="progress">
+      <div class="progress-fill" id="progressFill">
+        <div class="progress-dot"></div>
+      </div>
+    </div>
+
+    <div class="artist" id="artist">叶炫清&nbsp;&nbsp;[九张机]</div>
+  </div>
+
+  <!-- 歌词区域 -->
+  <div class="lyrics-wrap" id="lyricsWrap">
+    <div class="lyrics-mask lyrics-mask-top"></div>
+    <div class="lyrics" id="lyrics"></div>
+    <div class="lyrics-mask lyrics-mask-bottom"></div>
+  </div>
+</div>
+
+<!-- 快捷键提示 -->
+  <div class="shortcut-hint" id="shortcutHint">
+    <span id="hintText">空格 播放 / 暂停</span>
+  </div>
+
+<audio id="audio" src=""></audio>
+
+<script src="main.js"></script>
+<script src="play.js"></script>
+</body>
+</html>
